@@ -4,4 +4,4 @@ install:
 	poetry install
 
 run:
-	poetry run python spotify_to_tidal
+	poetry run spotify-to-tidal
