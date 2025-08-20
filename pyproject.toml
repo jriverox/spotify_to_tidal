@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "spotify-to-tidal"
+version = "0.1.0"
+description = "Migrar playlists de Spotify a TIDAL"
+authors = ["Tu Nombre <tu@email>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "spotify_to_tidal", from = "src" }]
+
+[tool.poetry.dependencies]
+# Usa la versión real que tengas instalada (3.10/3.11/3.12); pandas requiere >=3.9
+python = ">=3.10,<4.0"
+spotipy = "^2.23.0"
+tidalapi = "^0.7.2"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.0"
+
+[tool.poetry.scripts]
+spotify-to-tidal = "spotify_to_tidal.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
